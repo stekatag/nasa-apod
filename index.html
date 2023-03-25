@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>NASA API Pictures</title>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader hidden">
+      <img src="rocket.svg" alt="rocket loader animation" />
+    </div>
+    <!-- Container -->
+    <div class="container">
+      <!-- Navigation -->
+      <div class="navigation-container">
+        <span class="background"></span>
+        <!-- Results nav -->
+        <span class="navigation-items" id="resultsNav">
+          <h3 class="clickable" onclick="updateDOM('favorites')">Favorites</h3>
+          <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable" onclick="getNasaPictures()">Load more</h3>
+        </span>
+        <!-- Favorites Nav -->
+        <span class="navigation-items hidden" id="favoritesNav">
+          <h3 class="clickable" onclick="getNasaPictures()">
+            Load more NASA images
+          </h3>
+        </span>
+      </div>
+      <!-- Images Container -->
+      <div class="images-container">
+        <!-- <div class="card">
+          <a href="#" title="View Full Image" target="_blank">
+            <img
+              class="card-img-top"
+              src="https://apod.nasa.gov/apod/image/2303/TaurusDust_Chander_4096.jpg"
+              alt="NASA Picture of the day"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Title of Image</h5>
+            <p class="clickable favorite">Add to Favorites</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              aspernatur eos corrupti ex quis molestias, suscipit optio
+              cupiditate eius, debitis pariatur fugiat illum reprehenderit
+              itaque, veniam assumenda aliquam placeat? Illo.
+            </p>
+            <small class="text-muted">
+              <strong>03-21-2023</strong>
+              <span>Copyright Info</span>
+            </small>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- Save Confirmation -->
+    <div class="save-confirmed" hidden>
+      <h1>Added!</h1>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
